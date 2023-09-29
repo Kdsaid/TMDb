@@ -2,7 +2,11 @@ package com.example.tmdb.provider.impl
 
 import android.widget.ImageView
 import com.example.tmdb.util.extension.loadFromUrl
-import io.mockk.*
+import io.mockk.confirmVerified
+import io.mockk.every
+import io.mockk.mockk
+import io.mockk.mockkStatic
+import io.mockk.verify
 import org.junit.Before
 import org.junit.Test
 import kotlin.random.Random

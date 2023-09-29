@@ -7,12 +7,18 @@ import com.example.tmdb.data.source.local.MovieDatabase
 import com.example.tmdb.data.source.mapper.MovieMapper
 import com.example.tmdb.data.source.remote.MovieApi
 import com.example.tmdb.model.MovieModel
-import io.mockk.*
+import io.mockk.coEvery
+import io.mockk.coVerify
+import io.mockk.confirmVerified
+import io.mockk.every
+import io.mockk.mockk
+import io.mockk.verify
 import kotlinx.coroutines.runBlocking
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertThrows
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
-
 import java.io.IOException
 import kotlin.random.Random
 
