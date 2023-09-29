@@ -39,6 +39,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -60,14 +63,19 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
     implementation "com.google.dagger:hilt-android:2.44"
     kapt "com.google.dagger:hilt-compiler:2.44"
-    implementation "androidx.room:room-runtime:2.5.0"
-    implementation "androidx.room:room-ktx:2.5.0"
-    implementation "androidx.room:room-paging:2.5.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    implementation("androidx.room:room-ktx:$room_version")
+    kapt "androidx.room:room-compiler:$room_version"
 
+    implementation "androidx.room:room-paging:$room_version"
+    //hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
     //SSP and SDP  scalable size unit
     implementation "com.intuit.sdp:sdp-android:1.1.0"
     implementation "com.intuit.ssp:ssp-android:1.1.0"
-//
+
     //Glide
     implementation "com.github.bumptech.glide:glide:4.15.1"
     annotationProcessor "com.github.bumptech.glide:compiler:4.14.2"
