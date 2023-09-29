@@ -1,4 +1,4 @@
-package tuver.movies.model
+package com.example.tmdb.model
 
 import java.util.Date
 

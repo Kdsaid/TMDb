@@ -10,6 +10,7 @@ import com.example.tmdb.presentation.movielist.adapter.MovieSummaryAdapter
 import com.example.tmdb.provider.MovieImageProvider
 import com.example.tmdb.util.Constants.MOVIE_LIST_PAGE_SIZE
 import com.example.tmdb.util.extension.viewModelsFactory
+import com.example.tmdb.util.navigateTo
 import com.example.tmdb.util.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -28,7 +29,7 @@ class MovieListFragment : Fragment(R.layout.fragment_movie_list) {
 
     private val viewModel: MovieListViewModel by viewModelsFactory { viewModelFactory.create(MOVIE_LIST_PAGE_SIZE) }
 
-    private val movieSummaryAdapter by lazy { MovieSummaryAdapter(movieImageProvider) {it-> } }
+    private val movieSummaryAdapter by lazy { MovieSummaryAdapter(movieImageProvider) { navigateTo(MovieListFragmentDirections.toMovieDetailFragment(it))} }
 
 
 

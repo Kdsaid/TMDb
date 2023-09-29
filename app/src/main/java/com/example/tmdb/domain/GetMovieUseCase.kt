@@ -1,6 +1,6 @@
 package com.example.tmdb.domain
 
-import tuver.movies.model.MovieModel
+import com.example.tmdb.model.MovieModel
 
 interface GetMovieUseCase {
 

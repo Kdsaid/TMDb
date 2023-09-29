@@ -2,7 +2,7 @@ package com.example.tmdb.domain.impl
 
 import com.example.tmdb.data.MovieRepository
 import com.example.tmdb.domain.GetMovieUseCase
-import tuver.movies.model.MovieModel
+import com.example.tmdb.model.MovieModel
 import javax.inject.Inject
 
 class GetMovieUseCaseImpl @Inject constructor(

@@ -5,8 +5,8 @@ import com.example.tmdb.data.error.DtoNotFetchedError
 import com.example.tmdb.data.source.local.MovieDatabase
 import com.example.tmdb.data.source.mapper.MovieMapper
 import com.example.tmdb.data.source.remote.MovieApi
+import com.example.tmdb.model.MovieModel
 import retrofit2.HttpException
-import tuver.movies.model.MovieModel
 import java.io.IOException
 import javax.inject.Inject
 

@@ -1,13 +1,11 @@
 package com.example.tmdb.data.source.remote.di
 
-import android.content.Context
 import com.example.tmdb.BuildConfig
 import com.example.tmdb.data.source.remote.MovieApi
 import com.example.tmdb.data.source.remote.MovieApiConfigInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -19,7 +17,7 @@ import javax.inject.Singleton
 object RemoteDataSourceModule {
 
     @Provides
-    fun provideMovieApiConfigInterceptor(@ApplicationContext context: Context): MovieApiConfigInterceptor {
+    fun provideMovieApiConfigInterceptor(): MovieApiConfigInterceptor {
 
         return MovieApiConfigInterceptor(
             BuildConfig.API_KEY

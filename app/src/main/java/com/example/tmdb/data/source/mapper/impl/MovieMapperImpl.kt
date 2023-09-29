@@ -2,7 +2,7 @@ package com.example.tmdb.data.source.mapper.impl
 
 import com.example.tmdb.data.source.dto.MovieDto
 import com.example.tmdb.data.source.mapper.MovieMapper
-import tuver.movies.model.MovieModel
+import com.example.tmdb.model.MovieModel
 import java.text.SimpleDateFormat
 import javax.inject.Inject
 import javax.inject.Named

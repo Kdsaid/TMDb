@@ -1,6 +1,6 @@
 package com.example.tmdb.data
 
-import tuver.movies.model.MovieModel
+import com.example.tmdb.model.MovieModel
 
 interface MovieRepository {
 
