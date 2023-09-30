@@ -50,9 +50,10 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.5.1'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.0-alpha01'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.0-alpha01'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
     implementation "androidx.fragment:fragment-ktx:1.5.5"
     implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
@@ -62,6 +63,7 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
     implementation "com.google.dagger:hilt-android:2.44"
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.6.0-alpha01'
     kapt "com.google.dagger:hilt-compiler:2.44"
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
@@ -86,8 +88,20 @@ dependencies {
     testImplementation "androidx.arch.core:core-testing:2.2.0"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
 
-    androidTestImplementation "androidx.test.ext:junit:1.1.5"
-    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.1"
+
+//    androidTestImplementation 'androidx.test.ext:junit:1.2.0-alpha01'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.0-alpha01'
+//    //UI Tests
+//    androidTestImplementation 'androidx.test:core:1.5.0'
+//    androidTestImplementation 'androidx.test.ext:junit:1.2.0-alpha01'
+//    androidTestImplementation 'androidx.test:runner:1.6.0-alpha04'
+//    androidTestImplementation "androidx.test.espresso:espresso-core:3.6.0-alpha01"
+//    //noinspection GradleDependency
+//    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.6.0-alpha01'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.0-alpha01'
+//    implementation 'androidx.test.espresso:espresso-idling-resource:3.5.1'
+//    androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
+//    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
 }
 hilt {
     enableAggregatingTask = true
